@@ -1,6 +1,6 @@
 import { AbstractFactory } from "../abstract/abstractFactory";
 import { ProductA } from "../interface/productA";
-import { ProductA1 } from "../products/productsA/productA1/productA1";
+import { ProductA1 } from "../products/productsA/productA1";
 import { ProductB } from "../interface/productB";
 import { ProductB1 } from "../products/productsB/productB1";
 

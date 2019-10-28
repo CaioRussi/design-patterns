@@ -1,4 +1,4 @@
-import { ProductA } from "../../../interface/productA";
+import { ProductA } from "../../interface/productA";
 
 export class ProductA2 implements ProductA {
 
