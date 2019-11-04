@@ -1,18 +1,16 @@
-import { Target } from "./target";
-import { Adaptee } from "./adaptee";
+import { Target } from "./interface/target";
+import { ConcreteAdaptee } from "./concreteAdaptee";
 
-export class Adapter extends Target {
+export class Adapter implements Target {
 
-    private adaptee: Adaptee;
+    private concreteAdaptee: ConcreteAdaptee;
 
-    constructor(adaptee: Adaptee) {
-        super();
-        this.adaptee = adaptee;
+    constructor(concreteAdaptee: ConcreteAdaptee) {
+        this.concreteAdaptee = concreteAdaptee;
     }
 
     public request(): string {
-        const result = this.adaptee.specificRequest().split('').reverse().join('');
-        return `Adapter:  ${result}`;
+        return `Adapter: ${this.concreteAdaptee.specificRequest()}`;
     }
 
 }
